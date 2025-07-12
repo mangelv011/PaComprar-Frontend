@@ -1,0 +1,10 @@
+.ratingContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ratingValue {
+    margin-left: 5px;
+    color: #666;
+    font-size: 0.9rem;
+  }

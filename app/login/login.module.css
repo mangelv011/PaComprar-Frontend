@@ -1,0 +1,122 @@
+/* login.module.css */
+
+/* Cuerpo principal con flexbox */
+.loginMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+    padding: 20px;
+}
+
+/* Contenedor del formulario */
+.loginContainer {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.loginContainer h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Estilos del formulario */
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.loginFormInput {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.loginFormInput:focus {
+    border-color: #3f51b5;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+
+.loginFormSubmit {
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.loginFormSubmit:hover:not(:disabled) {
+    background-color: #303f9f;
+}
+
+.loginFormSubmit:disabled {
+    background-color: #9fa8da;
+    cursor: not-allowed;
+}
+
+/* Estilos para los enlaces */
+.loginLinks {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.loginLinksLink {
+    color: #3f51b5;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.loginLinksLink:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: #d32f2f;
+    background-color: #ffebee;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(211, 47, 47, 0.1);
+    border-left: 4px solid #d32f2f;
+}
+
+.errorLine {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(211, 47, 47, 0.2);
+}
+
+.errorLine:last-child {
+    border-bottom: none;
+}
+
+.debugInfo {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.debugInfo a {
+    color: #3f51b5;
+    text-decoration: none;
+}
+
+.debugInfo a:hover {
+    text-decoration: underline;
+}

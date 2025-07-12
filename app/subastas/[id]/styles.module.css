@@ -1,0 +1,790 @@
+/* Container and layout styles */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.auctionDetailContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.auctionDetail {
+  padding: 2rem 0;
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.mainContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.leftCol, .rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Title and heading styles */
+.title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.auctionTitle {
+  font-size: 1.8rem;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.sectionTitle {
+  font-size: 1.2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Navigation and breadcrumb */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.backLink, .backButton {
+  background: none;
+  border: none;
+  color: #3f51b5;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.backLink {
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+}
+
+.backButton {
+  background: #f5f5f5;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.backButton:hover {
+  background: #e0e0e0;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+/* Image sections */
+.imageSection {
+  flex: 1;
+  max-width: 500px;
+}
+
+.imageSection img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.mainImageContainer, .productImageContainer {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.productImageContainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 18.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f8f8f8;
+  border-radius: 0.625rem;
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+}
+
+.mainImage, .productImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.productImage {
+  max-width: 100%;
+  max-height: 25rem;
+  object-fit: contain !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+/* Price and bidding sections */
+.priceBox {
+  background: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.priceBox h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #3f51b5;
+  margin: 0.5rem 0;
+}
+
+.bids, .timeRemaining {
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.timeRemaining {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.category, .timeRemaining {
+  font-size: 0.9rem;
+}
+
+.timeIcon {
+  font-size: 1.2rem;
+}
+
+.pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.currentBid {
+  display: flex;
+  flex-direction: column;
+}
+
+.bidLabel {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.3rem;
+}
+
+.bidAmount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+.bidCount {
+  background-color: #f5f5f5;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.bidIcon {
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Bidding form */
+.bidForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.bidInputContainer, .bidInputGroup {
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.bidInput {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.bidInput:focus {
+  outline: none;
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+
+.currencySymbol, .euroSymbol {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-weight: 600;
+}
+
+.bidButton {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.bidButton:hover {
+  background-color: #27ae60;
+}
+
+.bidAction {
+  margin-bottom: 2rem;
+}
+
+.inputGroup {
+  margin-bottom: 1rem;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Buy now section */
+.buyNow {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #e8f5e9;
+  border-radius: 4px;
+}
+
+.buyNowText {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.buyNowAction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buyNowPrice {
+  color: #3498db;
+  font-weight: bold;
+}
+
+.buyNowButton {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buyNowButton:hover {
+  background-color: #2980b9;
+}
+
+.buyNowValue {
+  font-weight: bold;
+  color: #3f51b5;
+}
+
+/* Price information */
+.priceInfo {
+  margin-bottom: 2rem;
+}
+
+.priceInfo p {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.priceLabel {
+  font-weight: bold;
+}
+
+.priceValue {
+  font-size: 1.2rem;
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+/* Seller information */
+.sellerInfo {
+  display: flex;
+  align-items: center;
+}
+
+.sellerAvatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.sellerName {
+  font-weight: bold;
+  margin: 0;
+}
+
+.sellerSince {
+  color: #777;
+  margin: 0.25rem 0 0 0;
+  font-size: 0.9rem;
+}
+
+.sellerStats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+
+.sellerRating {
+  color: #f57c00;
+  font-weight: 600;
+}
+
+.sellerSales {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Category info */
+.categoryInfo {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.categoryInfo h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.category {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Description and details */
+.description {
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  line-height: 1.6;
+  color: #444;
+  white-space: pre-line;
+}
+
+.description h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.descriptionSection, .detailsSection {
+  margin-bottom: 2rem;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detailLabel {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.detailValue {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Status indicators */
+.auctionEnded, .endedBadge {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.endedBadge {
+  background-color: #e74c3c;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Info boxes */
+.descriptionBox, .sellerBox, .bidBox, .bidsHistoryBox {
+  background-color: white;
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.descriptionBox h3, .sellerBox h3, .bidBox h3 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.infoBar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+}
+
+/* Additional info sections */
+.bidTips {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.bidTips h4 {
+  margin-bottom: 0.8rem;
+  color: #555;
+}
+
+.bidTips ul {
+  padding-left: 1.2rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.bidTips li {
+  margin-bottom: 0.5rem;
+}
+
+.shippingInfo {
+  background-color: #fff8e1;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+}
+
+.shippingInfo h3 {
+  color: #ff8f00;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.shippingInfo p {
+  color: #666;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* Loading and error states */
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.error {
+  color: #d32f2f;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3f51b5;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+.errorContainer {
+  text-align: center;
+  padding: 3rem 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.errorImage {
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+  .mainContent {
+    grid-template-columns: 1.5fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .auctionDetailContainer {
+    padding: 1.5rem;
+  }
+  
+  .auctionDetail {
+    flex-direction: column;
+  }
+  
+  .imageSection {
+    max-width: none;
+    margin-bottom: 1.5rem;
+  }
+  
+  .content {
+    grid-template-columns: 1fr;
+  }
+  
+  .bidForm {
+    flex-direction: column;
+  }
+  
+  .bidButton {
+    width: 100%;
+    padding: 0.75rem;
+  }
+  
+  .buyNowAction {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .mainContent {
+    grid-template-columns: 1fr;
+  }
+  
+  .rightCol {
+    order: -1;
+  }
+  
+  .bidBox {
+    position: static;
+    margin-bottom: 2rem;
+  }
+}
+
+
+.ratingSection {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ratingForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.userRatingInput {
+  margin: 15px 0;
+}
+
+.userRatingDisplay {
+  margin: 10px 0;
+}
+
+.ratingButton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.ratingButton:hover {
+  background-color: #45a049;
+}
+
+.ratingButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.ratingSubmitted {
+  text-align: center;
+  color: #388e3c;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* Estilos para la sección de valoraciones */
+.ratingBox {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.ratingForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+  gap: 15px;
+}
+
+.ratingSuccess {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.ratingDisplay {
+  margin: 10px 0;
+}
+
+.ratingButton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.ratingButton:hover {
+  background-color: #45a049;
+}
+
+.ratingButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.loginRequired {
+  text-align: center;
+  margin: 15px 0;
+  font-style: italic;
+  color: #666;
+}
+
+.loginRequired a {
+  color: #1976d2;
+  text-decoration: underline;
+}
+
+.ratingSuccess {
+  text-align: center;
+  margin: 15px 0;
+  color: #388e3c;
+  font-weight: 500;
+}
